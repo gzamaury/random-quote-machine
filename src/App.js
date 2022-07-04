@@ -1,23 +1,15 @@
-import logo from "./logo.svg";
+import QuoteBox from "./component/QuoteBox/QuoteBox";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-container">
+        <QuoteBox
+          text="A life spent making mistakes is not only more honorable but more useful than a life spent in doing nothing."
+          author="George Bernard Shaw"
+        />
+      </div>
     </div>
   );
 }
