@@ -7,7 +7,9 @@ function QuoteBox({ text, author }) {
     <div id="quote-box" className="quoteBox">
       <div className="quoteBox-container">
         <img src={quote} className="quote-img" alt="quote" />
-        <p id="text">{text}</p>
+        <p id="text" data-testid="quote-box">
+          {text}
+        </p>
         <span id="author">— {author}</span>
       </div>
     </div>

@@ -1,8 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
+test("renders quote text element", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const quoteElement = screen.getByTestId(/quote-box/i);
+  expect(quoteElement).toBeInTheDocument();
+});
+
+test("quote element contains some text", () => {
+  render(<App />);
+  const quoteElement = screen.getByTestId(/quote-box/i);
+  expect(quoteElement).not.toHaveTextContent("");
 });
