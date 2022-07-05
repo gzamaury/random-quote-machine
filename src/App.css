@@ -1,22 +1,11 @@
 .App {
-  /* text-align: center; */
-  /* background: url("./img/clouds.jpeg"); */
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background: center/cover url("./img/clouds.jpeg");
 }
 
 .App-container {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.App-link {
-  color: #61dafb;
 }
