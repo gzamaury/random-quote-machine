@@ -3,16 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  text-align: center;
-  width: 1142px;
-  height: 496px;
 }
 
 .quoteBox-container {
   background-color: olive;
-  border: solid gray 20px;
+  margin: 2vmax 8vmax 2vmax 8vmax;
   display: flex;
   flex-direction: column;
 }
@@ -26,10 +21,27 @@
 
 #text {
   margin: 0;
-  padding: 80px 40px;
+  padding: 6vmax 2vmax 2vmax 2vmax;
+  -webkit-text-stroke: 1px #228bff;
+  font-family: SFProDisplay-Bold;
+  font-size: calc(10px + 4vmin);
+  /* font-size: 42px; */
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 48px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
 }
 
 #author {
   margin: 0 18px 18px 0;
+  -webkit-text-stroke: 1px #228bff;
+  font-family: SFProDisplay-HeavyItalic;
+  font-size: calc(6px + 2vmin);
+  /* font-size: 24px; */
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0;
   text-align: right;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+  font-weight: 800;
 }
