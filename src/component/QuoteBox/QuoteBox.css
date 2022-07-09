@@ -3,18 +3,24 @@ span {
   line-height: 1.5em;
 }
 
-.quoteBox {
-  background-color: rgb(30, 127, 162);
+.row-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-layout {
   display: flex;
   flex-direction: column;
+}
+
+.quoteBox {
+  background-color: rgb(30, 127, 162);
   justify-content: center;
 }
 
 .quoteBox-container {
   background-color: olive;
   margin: 2vmax 8vmax;
-  display: flex;
-  flex-direction: column;
 }
 
 .quote-img {
@@ -27,7 +33,7 @@ span {
 
 #text {
   margin: 0;
-  padding: 0vmax 3vmin 3vmin 3vmin;
+  padding: 0vmax 6vmin 3vmin 3vmin;
   -webkit-text-stroke: 1px #228bff;
   font-family: SFProDisplay-Bold;
   font-size: calc(10px + 4vmin);
@@ -47,6 +53,14 @@ span {
   text-align: right;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
   font-weight: 800;
+}
+
+#quote-col {
+  margin-right: -6vmin;
+}
+
+#btn-col {
+  margin: auto;
 }
 
 @media (max-width: 768px), screen and (orientation: portrait) {
