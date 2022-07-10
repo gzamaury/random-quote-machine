@@ -15,7 +15,7 @@ function QuoteBox({ text, author, onClick }) {
           <span id="author">— {author}</span>
         </div>
         <div id="btn-col">
-          <NextBtn onClick={onClick} />
+          <NextBtn btnId="new-quote" onClick={onClick} />
         </div>
       </div>
     </div>
