@@ -1,35 +1,120 @@
-.quoteBox {
-  background-color: rgb(30, 127, 162);
+p,
+span {
+  line-height: 1.5em;
+}
+
+.row-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-layout {
   display: flex;
   flex-direction: column;
+}
+
+.quoteBox {
+  background-color: rgb(30, 127, 162);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  text-align: center;
-  width: 1142px;
-  height: 496px;
 }
 
 .quoteBox-container {
   background-color: olive;
-  border: solid gray 20px;
-  display: flex;
-  flex-direction: column;
+  margin: 4vmax 6vmax;
 }
 
 .quote-img {
-  margin: 18px;
+  display: inline;
+  margin: 3vmin;
+  width: 5vmin;
   height: 5vmin;
   pointer-events: none;
-  position: absolute;
 }
 
 #text {
   margin: 0;
-  padding: 80px 40px;
+  padding: 0vmax 6vmin 3vmin 3vmin;
+  -webkit-text-stroke: 1px #228bff;
+  font-family: SFProDisplay-Bold;
+  font-size: calc(12px + 2vmax);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
 }
 
 #author {
-  margin: 0 18px 18px 0;
+  margin: 0 3vmin 3vmin 0;
+  -webkit-text-stroke: 1px #228bff;
+  font-family: SFProDisplay-HeavyItalic;
+  font-size: calc(6px + 1.5vmax);
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0;
   text-align: right;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+}
+
+#quote-col {
+  margin-right: -5vmin;
+}
+
+#btn-col {
+  margin: auto;
+}
+
+#next-btn {
+  width: 10vmin;
+  height: 10vmin;
+}
+
+@media only screen and (max-width: 500px),
+  screen and (max-height: 500px),
+  screen and (orientation: portrait) {
+  .quoteBox-container {
+    margin: 3vmin 2vmin 3vmin 2vmin;
+  }
+
+  #btn-col {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0 5vmin 5vmin 0;
+  }
+
+  #quote-col {
+    margin-right: 0vmin;
+  }
+
+  #text {
+    padding: 0vmax 3vmin 3vmin 3vmin;
+    font-size: calc(12px + 3vmax);
+  }
+
+  #author {
+    font-size: calc(10px + 2vmax);
+  }
+
+  #quote-box {
+    margin-top: 6vmin;
+    margin-bottom: 14vmin;
+  }
+
+  #next-btn {
+    min-width: 16vmin;
+    min-height: 16vmin;
+  }
+}
+
+@media only screen and (max-width: 425px), screen and (max-height: 425px) {
+  #text,
+  #author {
+    /* text-shadow: unset; */
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-text-stroke: unset;
+  }
+
+  #quote-box {
+    margin-bottom: 16vmin;
+  }
 }

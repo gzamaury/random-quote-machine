@@ -5,6 +5,8 @@ export default {
   component: QuoteBox,
   argTypes: {
     text: { control: "text" },
+    author: { control: "text" },
+    onClick: { action: "next-btn" },
   },
 };
 
