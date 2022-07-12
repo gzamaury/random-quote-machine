@@ -68,8 +68,8 @@ span {
   height: 10vmin;
 }
 
-@media only screen and (max-width: 500px),
-  screen and (max-height: 500px),
+@media only screen and (max-width: 534px),
+  screen and (max-height: 534px),
   screen and (orientation: portrait) {
   .quoteBox-container {
     margin: 3vmin 2vmin 3vmin 2vmin;
