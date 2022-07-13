@@ -23,9 +23,17 @@ function QuoteBox({ text, author, onClick }) {
 }
 
 QuoteBox.propTypes = {
-  text: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  author: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+QuoteBox.defaultProps = {
+  text: "A life spent making mistakes is not only more honorable but more useful than a life spent in doing nothing.",
+  author: "George Bernard Shaw",
+  onClick: () => {
+    console.log("NextBtn clicked.");
+  },
 };
 
 export default QuoteBox;
