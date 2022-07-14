@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import quote from "./quote.svg";
 import NextBtn from "../NextBtn/NextBtn";
 
-function QuoteBox({ text, author, onClick }) {
+function QuoteBox({ text, author, onClickNextBtn }) {
   return (
     <div id="quote-box" className="quoteBox">
       <div className="quoteBox-container row-layout">
@@ -15,7 +15,7 @@ function QuoteBox({ text, author, onClick }) {
           <span id="author">— {author}</span>
         </div>
         <div id="btn-col">
-          <NextBtn btnId="new-quote" onClick={onClick} />
+          <NextBtn btnId="new-quote" onClick={onClickNextBtn} />
         </div>
       </div>
     </div>
@@ -25,13 +25,13 @@ function QuoteBox({ text, author, onClick }) {
 QuoteBox.propTypes = {
   text: PropTypes.string,
   author: PropTypes.string,
-  onClick: PropTypes.func,
+  onClickNextBtn: PropTypes.func,
 };
 
 QuoteBox.defaultProps = {
   text: "A life spent making mistakes is not only more honorable but more useful than a life spent in doing nothing.",
   author: "George Bernard Shaw",
-  onClick: () => {
+  onClickNextBtn: () => {
     console.log("NextBtn clicked.");
   },
 };
