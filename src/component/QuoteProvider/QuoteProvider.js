@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import fetchRandomQuote from "../../api/quoteApi";
 
 const initialState = {
   text: "New Quote",
@@ -16,6 +17,7 @@ export default class QuoteProvider extends Component {
 
   newQuote() {
     this.setState(initialState);
+    console.log(fetchRandomQuote());
   }
 
   render() {
