@@ -1,11 +1,14 @@
 import QuoteBox from "./component/QuoteBox/QuoteBox";
 import "./App.css";
+import QuoteProvider from "./component/QuoteProvider/QuoteProvider";
 
 function App() {
   return (
     <div className="App">
       <div className="App-container">
-        <QuoteBox />
+        <QuoteProvider>
+          <QuoteBox />
+        </QuoteProvider>
       </div>
     </div>
   );
