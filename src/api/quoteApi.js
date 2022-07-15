@@ -7,7 +7,8 @@ const config = {
   },
 };
 
-const fetchRandomQuote = () =>
-  client.get("https://quotes15.p.rapidapi.com/quotes/random/", config);
+function fetchRandomQuote() {
+  return client.get("https://quotes15.p.rapidapi.com/quotes/random/", config);
+}
 
 export default fetchRandomQuote;
