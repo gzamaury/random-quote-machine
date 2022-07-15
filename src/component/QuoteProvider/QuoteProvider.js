@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import fetchRandomQuote from "../../api/quoteApi";
 
-const initialState = {
-  text: "New Quote",
-  author: "New Author",
-};
-
 export default class QuoteProvider extends Component {
   constructor(props) {
     super(props);
@@ -16,8 +11,15 @@ export default class QuoteProvider extends Component {
   }
 
   newQuote() {
-    this.setState(initialState);
-    console.log(fetchRandomQuote());
+    const promise = fetchRandomQuote();
+    promise
+      .then((result) => {
+        const { text, author } = formatResult(result);
+        this.setState({ text, author });
+      })
+      .catch((error) => {
+        console.error(`Failed to a new quote: ${error}`);
+      });
   }
 
   render() {
@@ -36,3 +38,9 @@ export default class QuoteProvider extends Component {
 QuoteProvider.propTypes = {
   children: PropTypes.element.isRequired,
 };
+
+function formatResult(result) {
+  const text = result.data.content;
+  const author = result.data.originator.name;
+  return { text, author };
+}
