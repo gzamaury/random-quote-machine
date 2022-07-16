@@ -10,6 +10,10 @@ export default class QuoteProvider extends Component {
     this.newQuote = this.newQuote.bind(this);
   }
 
+  componentDidMount() {
+    this.newQuote();
+  }
+
   newQuote() {
     const promise = fetchRandomQuote();
     promise
@@ -18,7 +22,7 @@ export default class QuoteProvider extends Component {
         this.setState({ text, author });
       })
       .catch((error) => {
-        console.error(`Failed to a new quote: ${error}`);
+        console.error(`Failed to get a new quote: ${error}`);
       });
   }
 
