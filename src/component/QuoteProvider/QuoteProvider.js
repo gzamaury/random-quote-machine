@@ -15,8 +15,7 @@ export default class QuoteProvider extends Component {
   }
 
   newQuote() {
-    const promise = fetchRandomQuote();
-    promise
+    fetchRandomQuote()
       .then((result) => {
         const { text, author } = formatResult(result);
         this.setState({ text, author });
