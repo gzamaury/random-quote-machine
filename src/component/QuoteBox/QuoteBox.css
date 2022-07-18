@@ -15,7 +15,9 @@ span {
 
 .quoteBox {
   background-color: rgb(30, 127, 162);
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .quoteBox-container {
@@ -25,11 +27,11 @@ span {
 
 .quote-img {
   display: inline;
-  margin: 0 3vmin 3vmin 0;
+  margin: 3vmin 3vmin 3vmin 0;
   width: 5vmin;
   height: 5vmin;
   pointer-events: none;
-  filter: drop-shadow(0 2px 4px rgb(0 0 0 / 50%));
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5));
 }
 
 #text {
@@ -40,12 +42,12 @@ span {
   font-size: calc(12px + 2vmax);
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-weight: 700;
 }
 
 #author {
-  margin: 0 3vmin 3vmin 0;
+  margin: 1.5vmin 3vmin 0 0;
   -webkit-text-stroke: 1px #228bff;
   font-family: SFProDisplay-HeavyItalic;
   font-style: italic;
@@ -53,7 +55,7 @@ span {
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0;
   text-align: right;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-weight: 800;
 }
 
@@ -79,6 +81,7 @@ span {
 
 .next-btn-container .btn > img {
   background: rgba(34, 139, 255, 0.1) !important;
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
 }
 
 @media only screen and (max-width: 534px),
@@ -110,8 +113,9 @@ span {
   }
 
   #quote-box {
-    margin-top: 6vmin;
-    margin-bottom: 14vmin;
+    min-height: calc(97vh - calc(10vmin + min(15vmin, 78px)));
+    margin-top: 3vmin;
+    margin-bottom: calc(10vmin + min(15vmin, 78px));
   }
 
   .next-btn-container .btn:hover {
@@ -131,6 +135,6 @@ span {
   }
 
   #quote-box {
-    margin-bottom: 16vmin;
+    margin-bottom: calc(10vmin + max(15vmin, 54px));
   }
 }
