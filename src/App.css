@@ -3,7 +3,7 @@
 }
 
 .App-container {
-  width: 98%;
+  width: 94vmax;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -22,7 +22,7 @@
   screen and (max-height: 534px),
   screen and (orientation: portrait) {
   .quoteBox-container {
-    margin: 3vmin -1vmin 3vmin -1vmin;
+    margin: 0vmin -1vmin 0vmin -1vmin;
   }
   .App-container {
     width: 92%;
