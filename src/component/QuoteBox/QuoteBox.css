@@ -59,6 +59,11 @@ span {
   font-weight: 800;
 }
 
+#tweet-quote img {
+  width: calc(24px + 5vmin);
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
+}
+
 #quote-col {
   margin-right: max(-39px, -7.5vmin);
   padding-right: min(39px, 7.5vmin);
