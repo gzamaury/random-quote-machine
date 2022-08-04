@@ -7,8 +7,17 @@ const config = {
   },
 };
 
-function fetchRandomQuote() {
-  return client.get("https://quotes15.p.rapidapi.com/quotes/random/", config);
+const availLangs = ["en", "es", "pt", "it", "de", "fr", "cs", "sk"];
+
+function fetchRandomQuote({ locale }) {
+  let endpoint = "https://quotes15.p.rapidapi.com/quotes/random/";
+  const lang = locale.match(/^[a-z]{2}/) || [];
+
+  if (availLangs.includes(lang[0])) {
+    endpoint = `${endpoint}?language_code=${lang[0]}`;
+  }
+
+  return client.get(endpoint, config);
 }
 
 export default fetchRandomQuote;

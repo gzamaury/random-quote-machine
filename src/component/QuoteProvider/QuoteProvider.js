@@ -15,7 +15,8 @@ export default class QuoteProvider extends Component {
   }
 
   newQuote() {
-    fetchRandomQuote()
+    const locale = navigator.language;
+    fetchRandomQuote({ locale })
       .then((result) => {
         const { text, author } = formatResult(result);
         this.setState({ text, author });
