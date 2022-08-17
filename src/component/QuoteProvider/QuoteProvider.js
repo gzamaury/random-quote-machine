@@ -6,6 +6,7 @@ export default class QuoteProvider extends Component {
   constructor(props) {
     super(props);
 
+    this.cachedQuote = {};
     this.state = {};
     this.newQuote = this.newQuote.bind(this);
   }
@@ -15,11 +16,12 @@ export default class QuoteProvider extends Component {
   }
 
   newQuote() {
+    this.setState(this.cachedQuote);
+
     const locale = navigator.language;
     fetchRandomQuote({ locale })
       .then((result) => {
-        const { text, author } = formatResult(result);
-        this.setState({ text, author });
+        this.cachedQuote = formatResult(result);
       })
       .catch((error) => {
         console.error(`Failed to get a new quote: ${error}`);
