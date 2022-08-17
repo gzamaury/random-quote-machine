@@ -13,8 +13,8 @@ function QuoteBox({ text, author, onClickNextBtn }) {
     <div id="quote-box" className="quoteBox">
       <div className="quoteBox-container row-layout">
         <div id="quote-col" className="column-layout">
-          <img src={quote} className="quote-img" alt="quote" />
           <p id="text" data-testid="quote-box">
+            <img src={quote} className="quote-img" alt="quote" />
             {text}{" "}
             <a
               id="tweet-quote"
