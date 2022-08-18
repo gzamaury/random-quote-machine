@@ -61,7 +61,11 @@ span {
 
 #tweet-quote img {
   width: calc(24px + 5vmin);
-  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
+  filter: opacity(0.5) drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
+}
+
+#tweet-quote img:hover {
+  filter: opacity(0.8) drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
 }
 
 #quote-col {
@@ -141,5 +145,8 @@ span {
 
   #quote-box {
     margin-bottom: calc(10vmin + max(15vmin, 54px));
+  }
+  #tweet-quote img {
+    filter: opacity(0.8) drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.3));
   }
 }
